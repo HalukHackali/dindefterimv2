@@ -620,7 +620,7 @@ class SorularBanner extends StatelessWidget {
                       FittedBox(
                         fit: BoxFit.fill,
                         child: Text(
-                          'Sorular ve Sınavlar',
+                          'Mini Test',
                           style: TextStyle(
                             color: Color(0xff24282C),
                             fontSize: 28,

@@ -8,12 +8,8 @@ class QuizApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Bilgini Sına',
-      theme: ThemeData(
-        primarySwatch: Colors.yellow,
-      ),
-      home: const QuizPage(),
+    return const MaterialApp(
+      home: QuizPage(),
     );
   }
 }
@@ -87,7 +83,40 @@ class _QuizPageState extends State<QuizPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Bilgini Sına'),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back), // Geri dönüş ikonu
+          onPressed: () {
+            Navigator.pushAndRemoveUntil(
+              context,
+              MaterialPageRoute(
+                builder: (BuildContext context) => const HomePage(),
+              ),
+                  (route) => false,
+            );
+          },
+        ),
+        flexibleSpace: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                Color(0xFF45464A),
+                Color(0xFF282C30),
+              ],
+              begin: Alignment.centerLeft,
+              end: Alignment.centerRight,
+            ),
+          ),
+        ),
+        title: const Center(
+          child: Text(
+            'Bilgini Sına',
+            style: TextStyle(
+              color: Color(0xffC0B9B9),
+              fontWeight: FontWeight.bold,
+              fontSize: 18,
+            ),
+          ),
+        ),
       ),
       body: _questionIndex < _questions.length
           ? Quiz(
@@ -95,8 +124,13 @@ class _QuizPageState extends State<QuizPage> {
         questions: _questions,
         answerQuestion: _answerQuestion,
       )
-          : Result(score: _score, resetQuiz: _resetQuiz, questions: _questions), // Pass both score and resetQuiz// Pass questions
+          : Result(
+        score: _score,
+        resetQuiz: _resetQuiz,
+        questions: _questions,
+      ), // Pass both score and resetQuiz// Pass questions
     );
+
   }
 }
 
