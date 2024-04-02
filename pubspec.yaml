@@ -1,0 +1,116 @@
+name: dindefterimv2
+description: "A new Flutter project."
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.2 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.6
+  flutter_markdown: ^0.6.18+2
+  characters: ^1.1.0
+  markdown: ^7.1.1
+  audioplayers: ^6.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.0
+
+flutter:
+
+  uses-material-design: true
+
+
+  assets:
+    # Sureler MP3
+    - assets/sureler_sound/asr_suresi.mp3
+    - assets/sureler_sound/fatiha_suresi.mp3
+    - assets/sureler_sound/felak_suresi.mp3
+    - assets/sureler_sound/fil_suresi.mp3
+    - assets/sureler_sound/ihlas_suresi.mp3
+    - assets/sureler_sound/kafirun_suresi.mp3
+    - assets/sureler_sound/kevser_suresi.mp3
+    - assets/sureler_sound/kureys_suresi.mp3
+    - assets/sureler_sound/maun_suresi.mp3
+    - assets/sureler_sound/nasr_suresi.mp3
+    - assets/sureler_sound/nas_suresi.mp3
+    - assets/sureler_sound/tebbet_suresi.mp3
+    - assets/sureler_sound/ayetelkursi.mp3
+
+    # İçerik Resimleri
+    - assets/logo_512.png
+    - assets/images/ablution_3858833.png
+    - assets/images/fasting_3858877.png
+    - assets/images/hajj_3858905.png
+    - assets/images/hand_3858865.png
+    - assets/images/iftar_3858847.png
+    - assets/images/kaaba_384383.png
+    - assets/images/koran_384372.png
+    - assets/images/muslim_3858927.png
+    - assets/images/praying_3858880.png
+    - assets/images/qibla_3858851.png
+    - assets/images/alms_3858836.png
+    - assets/images/allah_3858928.png
+
+    # Ünite İçerikleri
+    # 4.Sınıflar
+    - assets/markdown/siniflar_md/4.siniflar_md/1.unite/
+    - assets/markdown/siniflar_md/4.siniflar_md/2.unite/
+    - assets/markdown/siniflar_md/4.siniflar_md/3.unite/
+    - assets/markdown/siniflar_md/4.siniflar_md/4.unite/
+    - assets/markdown/siniflar_md/4.siniflar_md/5.unite/
+    # 5.Sınıflar
+    - assets/markdown/siniflar_md/5.siniflar_md/1.unite/
+    - assets/markdown/siniflar_md/5.siniflar_md/2.unite/
+    - assets/markdown/siniflar_md/5.siniflar_md/3.unite/
+    - assets/markdown/siniflar_md/5.siniflar_md/4.unite/
+    - assets/markdown/siniflar_md/5.siniflar_md/5.unite/
+    # 6.Sınıflar
+    - assets/markdown/siniflar_md/6.siniflar_md/1.unite/
+    - assets/markdown/siniflar_md/6.siniflar_md/2.unite/
+    - assets/markdown/siniflar_md/6.siniflar_md/3.unite/
+    - assets/markdown/siniflar_md/6.siniflar_md/4.unite/
+    - assets/markdown/siniflar_md/6.siniflar_md/5.unite/
+    # 7.Sınıflar
+    - assets/markdown/siniflar_md/7.siniflar_md/1.unite/
+    - assets/markdown/siniflar_md/7.siniflar_md/2.unite/
+    - assets/markdown/siniflar_md/7.siniflar_md/3.unite/
+    - assets/markdown/siniflar_md/7.siniflar_md/4.unite/
+    - assets/markdown/siniflar_md/7.siniflar_md/5.unite/
+    # 8.Sınıflar
+    - assets/markdown/siniflar_md/8.siniflar_md/1.unite/
+    - assets/markdown/siniflar_md/8.siniflar_md/2.unite/
+    - assets/markdown/siniflar_md/8.siniflar_md/3.unite/
+    - assets/markdown/siniflar_md/8.siniflar_md/4.unite/
+    - assets/markdown/siniflar_md/8.siniflar_md/5.unite/
+
+
+  fonts:
+    - family: Sniglet
+      fonts:
+        - asset: assets/fonts/Sniglet-Regular.ttf
+        - asset: assets/fonts/Sniglet-ExtraBold.ttf
+
+    - family: PatrickHand
+      fonts:
+        - asset: assets/fonts/PatrickHand-Regular.ttf
+
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700

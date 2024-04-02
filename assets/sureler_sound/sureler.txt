@@ -1,0 +1,12 @@
+asr_suresi.mp3
+fatiha_suresi.mp3
+felak_suresi.mp3
+fil_suresi.mp3
+ihlas_suresi.mp3
+kafirun_suresi.mp3
+kevse_suresi.mp3
+kureys_suresi.mp3
+maun_suresi.mp3
+nasr_suresi.mp3
+nas_suresi.mp3
+tebbet_suresi.mp3
