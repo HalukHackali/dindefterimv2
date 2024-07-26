@@ -1,6 +1,8 @@
 // model.dart
 
 class UniteModel {
+
+
   String sinif;
   String uniteNo;
   String uniteAdi;
@@ -21,6 +23,8 @@ class UniteModel {
   String uniteKazanim_7;
   String uniteKazanim_8;
   List<String> kavramlarOgrenmeAlani;
+
+
 
   UniteModel({
     required this.sinif,
@@ -43,6 +47,7 @@ class UniteModel {
     required this.uniteKazanim_7,
     required this.uniteKazanim_8,
     required this.kavramlarOgrenmeAlani,
+
   });
 
   factory UniteModel.fromJson(Map<String, dynamic> json) {
@@ -312,7 +317,7 @@ class UniteModel {
       UniteModel(
         sinif: '5.',
         uniteNo: '4.Ünite',
-        uniteAdi: 'Hz.Muhammed ve Aile Hayatı',
+        uniteAdi: 'Hz.Muhammed ve Aile Hayatı   ',
         kazanimAdi_1: '5.1.Hz.Muhammed’in Evliliği ve Çocukları',
         kazanimAdi_2: '5.2.Bir Eş Olarak Hz.Muhammed',
         kazanimAdi_3: '5.3.Bir Baba Olarak Hz.Muhammed',
@@ -340,7 +345,7 @@ class UniteModel {
       UniteModel(
         sinif: '5.',
         uniteNo: '5.Ünite',
-        uniteAdi: 'Çevremizde Dinin İzleri',
+        uniteAdi: 'Çevremizde Dinin İzleri  ',
         kazanimAdi_1: '5.1.Mimarimizde Dinin İzleri',
         kazanimAdi_2: '5.2.Musikimizde Dinin İzleri',
         kazanimAdi_3: '5.3.Edebiyatımızda Dinin İzleri',

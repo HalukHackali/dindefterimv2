@@ -11,9 +11,9 @@ class UnitelerScreen extends StatefulWidget {
   final String sinif;
 
   const UnitelerScreen({
-    Key? key,
+    super.key,
     required this.sinif,
-  }) : super(key: key);
+  });
 
   @override
   UnitelerScreenState createState() => UnitelerScreenState();
@@ -234,7 +234,8 @@ class UnitelerScreenState extends State<UnitelerScreen> {
                   ),
                 )
                 .toList(),
-          )),
+          ),
+      ),
     );
   }
 }
@@ -243,7 +244,7 @@ class UnitelerScreenState extends State<UnitelerScreen> {
 
 class KonuIcerikMarkDown extends StatelessWidget {
   final String mdLink;
-  const KonuIcerikMarkDown({Key? key, required this.mdLink}) : super(key: key);
+  const KonuIcerikMarkDown({super.key, required this.mdLink});
 
   @override
   Widget build(BuildContext context) {
@@ -291,9 +292,9 @@ class UniteAdi extends StatelessWidget {
   final UniteModel uniteModel;
 
   const UniteAdi({
-    Key? key,
+    super.key,
     required this.uniteModel,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -311,35 +312,41 @@ class UniteAdi extends StatelessWidget {
             flex: 2,
             child: Stack(
               children: <Widget>[
-                Container(
-                  decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(20),
-                      bottomLeft: Radius.circular(20),
+                FittedBox(
+                  fit: BoxFit.fill,
+                  child: Container(
+                    decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(20),
+                        bottomLeft: Radius.circular(20),
+                      ),
+                      color: Color(0xff24282C),
                     ),
-                    color: Color(0xff24282C),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(0.0),
-                    child: Column(
-                      children: [
-                        Text(uniteModel.uniteNo.characters.take(2).toString(),
-                            style: const TextStyle(
-                              color: Color(0xffF8F8F2),
-                              fontSize: 32,
-                              fontFamily: 'PatrickHand',
-                              fontWeight: FontWeight.normal,
-                            ),
-                            textAlign: TextAlign.center),
-                        const Text("  Ünite  ",
-                            style: TextStyle(
-                              color: Color(0xffF8F8F2),
-                              fontSize: 24,
-                              fontFamily: 'PatrickHand',
-                              fontWeight: FontWeight.normal,
-                            ),
-                            textAlign: TextAlign.center)
-                      ],
+                    child: Padding(
+                      padding: const EdgeInsets.all(0.0),
+                      child: FittedBox(
+                        fit: BoxFit.fill,
+                        child: Column(
+                          children: [
+                            Text(uniteModel.uniteNo.characters.take(2).toString(),
+                                style: const TextStyle(
+                                  color: Color(0xffF8F8F2),
+                                  fontSize: 32,
+                                  fontFamily: 'PatrickHand',
+                                  fontWeight: FontWeight.normal,
+                                ),
+                                textAlign: TextAlign.center),
+                             const Text("  Ünite  ",
+                                style: TextStyle(
+                                  color: Color(0xffF8F8F2),
+                                  fontSize: 24,
+                                  fontFamily: 'PatrickHand',
+                                  fontWeight: FontWeight.normal,
+                                ),
+                                textAlign: TextAlign.center)
+                          ],
+                        ),
+                      ),
                     ),
                   ),
                 ),
@@ -348,14 +355,17 @@ class UniteAdi extends StatelessWidget {
           ),
           Expanded(
             flex: 8,
-            child: Text(uniteModel.uniteAdi,
-                style: const TextStyle(
-                  color: Color(0xff24282C),
-                  fontSize: 26,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: 'PatrickHand',
-                ),
-                textAlign: TextAlign.center),
+            child: FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(uniteModel.uniteAdi,
+                  style: const TextStyle(
+                    color: Color(0xff24282C),
+                    fontSize: 36,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'PatrickHand',
+                  ),
+                  textAlign: TextAlign.center),
+            ),
           ),
         ],
       ),
@@ -407,15 +417,15 @@ class KavramlarOgrenmeAlani extends StatelessWidget {
                 ),
               ),
               child: SizedBox(
-                height: 140,
+                height: 145,
                 child: Center(
                   child: Column(
                     children: [
                       const SizedBox(height: 10),
                       const Text(
-                        'Kavramlar',
+                        ' Kavramlar ',
                         style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 25,
                           color: Color(0xffF8F8F2),
                           fontWeight: FontWeight.bold,
                         ),
@@ -426,14 +436,18 @@ class KavramlarOgrenmeAlani extends StatelessWidget {
                         endIndent: 36,
                         indent: 36,
                       ),
-                      Text(
-                        kavramBirString,
-                        style: const TextStyle(
-                          fontSize: 13,
-                          color: Color(0xffF8F8F2),
-                          fontWeight: FontWeight.normal,
+                      FittedBox(
+                        fit: BoxFit.scaleDown,
+                        child: Text(
+                          kavramBirString,
+                          style: const TextStyle(
+                            fontSize: 13,
+                            color: Color(0xffF8F8F2),
+                            fontWeight: FontWeight.normal,
+                          ),
                         ),
                       ),
+
                     ],
                   ),
                 ),
@@ -464,16 +478,19 @@ class KavramlarOgrenmeAlani extends StatelessWidget {
                 ),
               ),
               child: SizedBox(
-                height: 140,
+                height: 145,
                 child: Column(
                   children: [
                     const SizedBox(height: 10),
-                    const Text(
-                      "Öğrenme Alanı",
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Color(0xffF8F8F2),
-                        fontWeight: FontWeight.bold,
+                    const FittedBox(
+                      fit: BoxFit.contain,
+                      child: Text(
+                        " Öğrenme Alanı ",
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Color(0xffF8F8F2),
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                     const Divider(
@@ -512,69 +529,75 @@ Widget unitAltKonuAdiBant(
       Navigator.push(
           context, MaterialPageRoute(builder: (context) => pageLink));
     },
-    child: Card(
-      shape: RoundedRectangleBorder(
-        side: const BorderSide(
-          color: Color(0xff24282C),
-          width: 5.0,
+    child: SizedBox(
+      height: 70, // Kart yüksekliği burada belirlendi
+      child: Card(
+        shape: RoundedRectangleBorder(
+          side: const BorderSide(
+            color: Color(0xff24282C),
+            width: 5.0,
+          ),
+          borderRadius: BorderRadius.circular(20),
         ),
-        borderRadius: BorderRadius.circular(20),
-      ),
-      elevation: 8,
-      margin: const EdgeInsets.only(top: 6),
-      color: const Color(0xff6272A4),
-      child: Row(
-        children: [
-          Expanded(
-            flex: 1,
-            child: Stack(
-              children: <Widget>[
-                Container(
-                  decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(20),
-                      bottomLeft: Radius.circular(20),
+        elevation: 8,
+        margin: const EdgeInsets.only(top: 6),
+        color: const Color(0xff6272A4),
+        child: Row(
+          children: [
+            Expanded(
+              flex: 1,
+              child: Stack(
+                children: <Widget>[
+                  Container(
+                    decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(20),
+                        bottomLeft: Radius.circular(20),
+                      ),
+                      color: Color(0xff24282C),
                     ),
-                    color: Color(0xff24282C),
-                  ),
-                  child: Center(
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        children: [
-                          Text(
-                            konuAdi.characters.take(4).toString(),
-                            style: const TextStyle(
-                              color: Color(0xffF8F8F2),
-                              fontSize: 20,
-                              fontFamily: 'PatrickHand',
-                              fontWeight: FontWeight.normal,
+                    child: Center(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          children: [
+                            FittedBox(
+                              fit: BoxFit.fill,
+                              child: Text(
+                                konuAdi.characters.take(4).toString(),
+                                style: const TextStyle(
+                                  color: Color(0xffF8F8F2),
+                                  fontSize: 20,
+                                  fontFamily: 'PatrickHand',
+                                  fontWeight: FontWeight.normal,
+                                ),
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-          Expanded(
-            flex: 6,
-            child: Center(
-              child: Text(
-                textAlign: TextAlign.center,
-                konuAdi.substring(4),
-                style: TextStyle(
-                  color: const Color(0xffE5E5E5),
-                  fontSize: konuAdi.length > 38 ? 18 : 22,
-                  fontWeight: FontWeight.normal,
-                  fontFamily: 'PatrickHand',
+            Expanded(
+              flex: 6,
+              child: Center(
+                child: Text(
+                  textAlign: TextAlign.center,
+                  konuAdi.substring(4),
+                  style: TextStyle(
+                    color: const Color(0xffE5E5E5),
+                    fontSize: konuAdi.length > 38 ? 18 : 22,
+                    fontWeight: FontWeight.normal,
+                    fontFamily: 'PatrickHand',
+                  ),
                 ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     ),
   );

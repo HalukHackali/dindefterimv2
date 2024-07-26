@@ -1,4 +1,6 @@
+
 import 'package:flutter/material.dart';
+
 
 class SalliBarik extends StatelessWidget {
   const SalliBarik({super.key});

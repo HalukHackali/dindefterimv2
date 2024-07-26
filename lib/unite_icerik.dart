@@ -9,12 +9,12 @@ class UniteIcerik extends StatefulWidget {
   final String uniteNo;
 
   const UniteIcerik({
-    Key? key,
+    super.key,
     required this.konuAdi,
     required this.mdLinkF,
     required this.sinif,
     required this.uniteNo,
-  }) : super(key: key);
+  });
 
   @override
   State<UniteIcerik> createState() => _UniteIcerikState();

@@ -1,6 +1,7 @@
-// main.dart
-
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:dindefterimv2/Sorular/boslukDoldurma.dart';
+import 'package:dindefterimv2/Sorular/soru_cevap.dart';
 import 'Dualar_Sureler/dualar_sureler.dart';
 import 'uniteler_screen.dart';
 
@@ -9,7 +10,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,32 +20,122 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
+
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  int _selectedIndex = 1; // Başlangıçta "Anasayfa" seçili olacak
+
+  static final List<Widget> _widgetOptions = <Widget>[
+    const Giris(),
+    const Anasayfa(),
+    const Ayarlar(),
+  ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
-      child: Scaffold(
-        backgroundColor: Color(0xffE5E5E5),
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              BannerWidget(),
-              CategoryGrid(),
-              FlatBanner(),
-              IlkokulBanner(sinif: '4.',),
-             // LiseBanner(),
-              FlatBanner(),
-              NamazDualariBanner(),
-              SorularBanner()
+    return Scaffold(
+      body: Center(
+        child: _widgetOptions.elementAt(_selectedIndex),
+      ),
+      bottomNavigationBar: CupertinoTabBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(CupertinoIcons.person_add),
+            label: 'Giriş',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(CupertinoIcons.home),
+            label: 'Anasayfa',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(CupertinoIcons.settings_solid),
+            label: 'Ayarlar',
+          ),
+        ],
+        currentIndex: _selectedIndex,
+        onTap: _onItemTapped,
+        iconSize: 22,
+       // unselectedFontSize: 10,
+      //  selectedFontSize: 12,
+           backgroundColor: Colors.transparent,
+      ),
+    );
+  }
+}
 
-              // ButtonBarWidget(),
+class Anasayfa extends StatelessWidget {
+  const Anasayfa({Key? key}) : super(key: key);
 
-              // Diğer sayfa içeriğini eklemek için gerekli widget'ları ekleyin
-            ],
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+        color: const Color(0xffE5E5E5),
+        child: const SafeArea(
+          top: true,
+          bottom: false,
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                BannerWidget(),
+                BannerNews(),
+                CategoryGrid(),
+                FlatBanner(),
+                IlkokulBanner(
+                  sinif: '4.',
+                ),
+                // LiseBanner(),
+                FlatBanner(),
+                NamazDualariBanner(),
+                SorularBanner(),
+                BoslukDoldur()
+
+                // ButtonBarWidget(),
+
+                // Diğer sayfa içeriğini eklemek için gerekli widget'ları ekleyin
+              ],
+            ),
           ),
         ),
+      ),
+    );
+  }
+}
+
+class Ayarlar extends StatelessWidget {
+  const Ayarlar({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return const Center(
+      child: Text(
+        'Ayarlar İçeriği',
+        style: TextStyle(fontSize: 24),
+      ),
+    );
+  }
+}
+
+class Giris extends StatelessWidget {
+  const Giris({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return const Center(
+      child: Text(
+        'Giriş İçeriği',
+        style: TextStyle(fontSize: 24),
       ),
     );
   }
@@ -95,35 +186,130 @@ class BannerWidget extends StatelessWidget {
           const Expanded(
             flex: 8,
             child: Center(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Center(
-                    child: Text(
-                      'DinDefterim',
-                      style: TextStyle(
-                        fontFamily: 'PatrickHand',
-                        color: Color(0xff578F85),
-                        fontSize: 36.0,
-                        fontWeight: FontWeight.bold,
+              child: FittedBox(
+                fit: BoxFit.fill,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Center(
+                      child: Text(
+                        'DinDefterim',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontFamily: 'PatrickHand',
+                          color: Color(0xff578F85),
+                          fontSize: 36.0,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
-                  ),
-                  Center(
-                    child: Text(
-                      'Din Kültürü ve Ahlak Bilgisi',
-                      style: TextStyle(
-                          fontFamily: 'PatrickHand',
-                          color: Color(0xffE27598),
-                          fontSize: 24.0,
-                          fontWeight: FontWeight.normal),
+                    Center(
+                      child: Text(
+                        textAlign: TextAlign.center,
+                        'Din Kültürü ve Ahlak Bilgisi',
+                        style: TextStyle(
+                            fontFamily: 'PatrickHand',
+                            color: Color(0xffE27598),
+                            fontSize: 24.0,
+                            fontWeight: FontWeight.normal),
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class BannerNews extends StatelessWidget {
+  const BannerNews({super.key});
+
+  void _showPopup(BuildContext context) {
+    showCupertinoModalPopup(
+      context: context,
+      builder: (BuildContext context) {
+        return CupertinoAlertDialog(
+          title: const Text('Bilgi'),
+          content: const Text(
+              'Bu uygulama 2024-2025 eğitim-öğretim yılında uygulanacak yeni müfredata göre hazırlanmıştır.'),
+          actions: <CupertinoDialogAction>[
+            CupertinoDialogAction(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: const Text(
+                'Tamam',
+                style: TextStyle(
+                    color: Color(0xff6272A4), fontWeight: FontWeight.bold),
+              ),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        _showPopup(context);
+      },
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12),
+          gradient: const LinearGradient(
+            begin: Alignment.centerLeft,
+            end: Alignment(0.8, 1),
+            colors: <Color>[
+              Color(0xff45464A),
+              Color(0xff24282C),
+            ],
+            tileMode: TileMode.mirror,
+          ),
+          border: Border.all(
+              color: const Color(0xff578F85),
+              width: 4.0,
+              style: BorderStyle.solid),
+        ),
+        margin: const EdgeInsets.only(right: 20, left: 20, top: 20),
+        padding: const EdgeInsets.only(left: 0.0, top: 4.0, bottom: 6.0),
+        child: Row(
+          children: [
+            Expanded(
+              flex: 8,
+              child: Center(
+                child: FittedBox(
+                  fit: BoxFit.fill,
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      const Center(
+                        child: Text(
+                          'Güncel Müfredata Göre Hazırlandı (2024) ',
+                          style: TextStyle(
+                              fontFamily: 'PatrickHand',
+                              color: Color(0xffcbc9d3),
+                              fontSize: 20.0,
+                              fontWeight: FontWeight.normal),
+                        ),
+                      ),
+                      Image.asset(
+                        'assets/images/hand_tap.png',
+                        width: 25.0,
+                        height: 25.0,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -143,12 +329,11 @@ class CategoryGrid extends StatelessWidget {
         childAspectRatio: 1.9,
         shrinkWrap: true,
         physics: const NeverScrollableScrollPhysics(),
-        children:  const [
+        children: const [
           CategoryCard(sinif: "5.", description: 'Sınıf'),
           CategoryCard(sinif: "6.", description: 'Sınıf'),
           CategoryCard(sinif: "7.", description: 'Sınıf'),
           CategoryCard(sinif: "8.", description: 'Sınıf'),
-
         ],
       ),
     );
@@ -160,11 +345,10 @@ class CategoryCard extends StatelessWidget {
   final String description;
 
   const CategoryCard({
-    Key? key,
+    super.key,
     required this.sinif,
     required this.description,
-  }) : super(key: key);
-
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -173,7 +357,9 @@ class CategoryCard extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) =>   UnitelerScreen(sinif: sinif,),
+            builder: (context) => UnitelerScreen(
+              sinif: sinif,
+            ),
           ),
         );
       },
@@ -184,7 +370,7 @@ class CategoryCard extends StatelessWidget {
         ),
         elevation: 6,
         shadowColor: const Color(0xff24282C),
-      //  margin: const EdgeInsets.only(top: 0),
+        //  margin: const EdgeInsets.only(top: 0),
         color: const Color(0xffD9D9D9),
         child: Row(
           children: [
@@ -200,13 +386,16 @@ class CategoryCard extends StatelessWidget {
                       color: Color(0xff24282C),
                     ),
                     child: Center(
-                      child: Text(
-                        sinif,
-                        style: const TextStyle(
-                            color: Color(0xff6272A4),
-                            fontSize: 46,
-                            fontFamily: 'PatrickHand',
-                            fontWeight: FontWeight.normal),
+                      child: FittedBox(
+                        fit: BoxFit.fill,
+                        child: Text(
+                          sinif,
+                          style: const TextStyle(
+                              color: Color(0xff6272A4),
+                              fontSize: 46,
+                              fontFamily: 'PatrickHand',
+                              fontWeight: FontWeight.normal),
+                        ),
                       ),
                     ),
                   ),
@@ -216,13 +405,16 @@ class CategoryCard extends StatelessWidget {
             Expanded(
               flex: 7,
               child: Center(
-                child: Text(
-                  description,
-                  style: const TextStyle(
-                    color: Color(0xff6272A4),
-                    fontSize: 28,
-                    fontWeight: FontWeight.bold,
-                    fontFamily: 'PatrickHand',
+                child: FittedBox(
+                  fit: BoxFit.fill,
+                  child: Text(
+                    description,
+                    style: const TextStyle(
+                      color: Color(0xff6272A4),
+                      fontSize: 28,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'PatrickHand',
+                    ),
                   ),
                 ),
               ),
@@ -267,7 +459,9 @@ class IlkokulBanner extends StatelessWidget {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) =>   UnitelerScreen(sinif: sinif,),
+              builder: (context) => UnitelerScreen(
+                sinif: sinif,
+              ),
             ),
           );
         },
@@ -307,28 +501,31 @@ class IlkokulBanner extends StatelessWidget {
               ),
               const Expanded(
                 flex: 10,
-                child: Center(
-                  child: Column(
-                    children: [
-                      Text(
-                        'İlkokul',
-                        style: TextStyle(
-                          color: Color(0xff6272A4),
-                          fontSize: 28,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'PatrickHand',
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Center(
+                    child: Column(
+                      children: [
+                        Text(
+                          'İlkokul',
+                          style: TextStyle(
+                            color: Color(0xff6272A4),
+                            fontSize: 28,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'PatrickHand',
+                          ),
                         ),
-                      ),
-                      Text(
-                        '4.Sınıf',
-                        style: TextStyle(
-                          color: Color(0xff6272A4),
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'PatrickHand',
+                        Text(
+                          '4.Sınıf',
+                          style: TextStyle(
+                            color: Color(0xff6272A4),
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'PatrickHand',
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -480,7 +677,7 @@ class NamazDualariBanner extends StatelessWidget {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) =>  const DualarSureler() ,
+              builder: (context) => const DualarSureler(),
             ),
           );
         },
@@ -499,22 +696,28 @@ class NamazDualariBanner extends StatelessWidget {
                 child: Center(
                   child: Column(
                     children: [
-                      Text(
-                        'Namaz',
-                        style: TextStyle(
-                          color: Color(0xff24282C),
-                          fontSize: 28,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'PatrickHand',
+                      FittedBox(
+                        fit: BoxFit.scaleDown,
+                        child: Text(
+                          'Namaz',
+                          style: TextStyle(
+                            color: Color(0xff24282C),
+                            fontSize: 28,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'PatrickHand',
+                          ),
                         ),
                       ),
-                      Text(
-                        ' Sureleri ve Duaları',
-                        style: TextStyle(
-                          color: Color(0xff24282C),
-                          fontSize: 28,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'PatrickHand',
+                      FittedBox(
+                        fit: BoxFit.fill,
+                        child: Text(
+                          ' Sureleri ve Duaları',
+                          style: TextStyle(
+                            color: Color(0xff24282C),
+                            fontSize: 28,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'PatrickHand',
+                          ),
                         ),
                       ),
                     ],
@@ -526,7 +729,6 @@ class NamazDualariBanner extends StatelessWidget {
                 child: Stack(
                   children: <Widget>[
                     Container(
-
                       decoration: const BoxDecoration(
                         borderRadius: BorderRadius.only(
                             topRight: Radius.circular(20),
@@ -539,16 +741,12 @@ class NamazDualariBanner extends StatelessWidget {
                           child: Column(
                             children: [
                               Icon(Icons.picture_as_pdf,
-                                  size: 28,
-                                  color: Color(0xffF8F8F2)
-                              ),
+                                  size: 28, color: Color(0xffF8F8F2)),
                               SizedBox(
                                 height: 3,
                               ),
                               Icon(Icons.headset,
-                                  size: 28,
-                                  color: Color(0xffF8F8F2)
-                              )
+                                  size: 28, color: Color(0xffF8F8F2))
                             ],
                           ),
                         ),
@@ -571,10 +769,15 @@ class SorularBanner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(right: 20, left: 20),
+      padding: const EdgeInsets.only(right: 20, left: 20, bottom: 20),
       child: InkWell(
         onTap: () {
-          // Kategori kartına tıklanınca yapılacak işlemler
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const QuizApp(),
+            ),
+          );
         },
         child: Card(
           shape: RoundedRectangleBorder(
@@ -591,13 +794,16 @@ class SorularBanner extends StatelessWidget {
                 child: Center(
                   child: Column(
                     children: [
-                      Text(
-                        'Sorular ve Sınavlar',
-                        style: TextStyle(
-                          color: Color(0xff24282C),
-                          fontSize: 28,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'PatrickHand',
+                      FittedBox(
+                        fit: BoxFit.fill,
+                        child: Text(
+                          'Sorular ve Sınavlar',
+                          style: TextStyle(
+                            color: Color(0xff24282C),
+                            fontSize: 28,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'PatrickHand',
+                          ),
                         ),
                       ),
                     ],
@@ -609,7 +815,6 @@ class SorularBanner extends StatelessWidget {
                 child: Stack(
                   children: <Widget>[
                     Container(
-
                       decoration: const BoxDecoration(
                         borderRadius: BorderRadius.only(
                             topRight: Radius.circular(20),
@@ -622,16 +827,98 @@ class SorularBanner extends StatelessWidget {
                           child: Column(
                             children: [
                               Icon(Icons.picture_as_pdf,
-                                  size: 28,
-                                  color: Color(0xffF8F8F2)
-                              ),
+                                  size: 28, color: Color(0xffF8F8F2)),
                               SizedBox(
                                 height: 3,
                               ),
                               Icon(Icons.school,
-                                  size: 28,
-                                  color: Color(0xffF8F8F2)
-                              )
+                                  size: 28, color: Color(0xffF8F8F2))
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class BoslukDoldur extends StatelessWidget {
+  const BoslukDoldur({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(right: 20, left: 20),
+      child: InkWell(
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => FillInTheBlankQuiz(),
+            ),
+          );
+        },
+        child: Card(
+          shape: RoundedRectangleBorder(
+            side: const BorderSide(color: Color(0xff24282C), width: 5.0),
+            borderRadius: BorderRadius.circular(20),
+          ),
+          elevation: 8,
+          margin: const EdgeInsets.only(top: 0),
+          color: const Color(0xff578F85),
+          child: Row(
+            children: [
+              const Expanded(
+                flex: 5,
+                child: Center(
+                  child: Column(
+                    children: [
+                      FittedBox(
+                        fit: BoxFit.fill,
+                        child: Text(
+                          'Boşluk Doldur',
+                          style: TextStyle(
+                            color: Color(0xff24282C),
+                            fontSize: 28,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'PatrickHand',
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Expanded(
+                flex: 1,
+                child: Stack(
+                  children: <Widget>[
+                    Container(
+                      decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(20),
+                            bottomRight: Radius.circular(20)),
+                        color: Color(0xff24282C),
+                      ),
+                      child: const Center(
+                        child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Column(
+                            children: [
+                              Icon(Icons.picture_as_pdf,
+                                  size: 28, color: Color(0xffF8F8F2)),
+                              SizedBox(
+                                height: 3,
+                              ),
+                              Icon(Icons.school,
+                                  size: 28, color: Color(0xffF8F8F2))
                             ],
                           ),
                         ),

@@ -23,37 +23,37 @@
 » Ekonomik dengesizlikleri önler, ekonomik hayatın canlanmasını sağlar.
 
 
-| **Kimler Verir**     |
-|:--------------------:|
-| Müslüman olanlar             |
+|       **Kimler Verir**       |
+|:----------------------------:|
+|       Müslüman olanlar       |
 | Akıl sağlığı yerinde olanlar |
-| Ergenlik çağında olanlar     |
-| Zengin olanlar               |
+|   Ergenlik çağında olanlar   |
+|        Zengin olanlar        |
 
 ---
 
-|**Nelerden Verilir** | **Ne Kadar Verilir**   |
-|:-------------------:| ----------------------:|
-|• Altın-gümüş-para   |1/40                    |
-|• Ticaret Malları    |1/40                    |
-|• Küçük Baş Hayvanlar|1/40                    |
-|• Büyük Baş Hayvanlar|1/30                    |
-|• Deve               |1/5 için 1 küçük baş    |
-|• Toprak Ürünleri    |1/10 ya da 1/20         |
-|• Madenler           |1/5                     |
+| **Nelerden Verilir**  | **Ne Kadar Verilir** |
+|:---------------------:|---------------------:|
+|  • Altın-gümüş-para   |                 1/40 |
+|   • Ticaret Malları   |                 1/40 |
+| • Küçük Baş Hayvanlar |                 1/40 |
+| • Büyük Baş Hayvanlar |                 1/30 |
+|        • Deve         | 1/5 için 1 küçük baş |
+|   • Toprak Ürünleri   |      1/10 ya da 1/20 |
+|      • Madenler       |                  1/5 |
 
 ---
 
-|**Kimlere Verilir (Tevbe suresi, 60. ayet**)|
-|:------------------------------------------:|
-| • Yoksullara                               |
-| • Borçlulara                               |
-| • Yolda kalmış olanlara                    |
-| • Zekat memurlarına                        |
-| • Düşkünlere                               |
-| • Kalpleri İslam’a ısındırılacak olanlara  |
-| • Özgürlüğüne kavuşturulacak olan kölelere |
-| • Allah yolunda cihad edenlere             |
+| **Kimlere Verilir (Tevbe suresi, 60. ayet**) |
+|:--------------------------------------------:|
+|                 • Yoksullara                 |
+|                 • Borçlulara                 |
+|           • Yolda kalmış olanlara            |
+|             • Zekat memurlarına              |
+|                 • Düşkünlere                 |
+|  • Kalpleri İslam’a ısındırılacak olanlara   |
+|  • Özgürlüğüne kavuşturulacak olan kölelere  |
+|        • Allah yolunda cihad edenlere        |
 
 ---
 

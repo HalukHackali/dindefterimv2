@@ -1,11 +1,24 @@
+import 'package:dindefterimv2/Dualar_Sureler/ayetelkursi.dart';
+import 'package:dindefterimv2/Dualar_Sureler/felak.dart';
 import 'package:dindefterimv2/Dualar_Sureler/fatiha.dart';
 import 'package:dindefterimv2/Dualar_Sureler/fil.dart';
+import 'package:dindefterimv2/Dualar_Sureler/ihlas.dart';
+import 'package:dindefterimv2/Dualar_Sureler/kafirun.dart';
+import 'package:dindefterimv2/Dualar_Sureler/kevser.dart';
 import 'package:dindefterimv2/Dualar_Sureler/kunut.dart';
+import 'package:dindefterimv2/Dualar_Sureler/kureys.dart';
+import 'package:dindefterimv2/Dualar_Sureler/maun.dart';
+import 'package:dindefterimv2/Dualar_Sureler/nas.dart';
+import 'package:dindefterimv2/Dualar_Sureler/nasr.dart';
 import 'package:dindefterimv2/Dualar_Sureler/rabbenalar.dart';
 import 'package:dindefterimv2/Dualar_Sureler/salliBarik.dart';
 import 'package:dindefterimv2/Dualar_Sureler/subhaneke.dart';
+import 'package:dindefterimv2/Dualar_Sureler/surelar_widget.dart';
 import 'package:dindefterimv2/Dualar_Sureler/tahiyyat.dart';
+import 'package:dindefterimv2/Dualar_Sureler/asr.dart';
+import 'package:dindefterimv2/Dualar_Sureler/tebbet.dart';
 import 'package:flutter/material.dart';
+
 
 class DualarSureler extends StatelessWidget {
   const DualarSureler({super.key});
@@ -38,1244 +51,242 @@ class DualarSureler extends StatelessWidget {
           ),
         ),
         body: SingleChildScrollView(
-          child: Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) =>   const Subhaneke(),
-                      ),
-                    );
-                  },
-                  child: Card(
-                    shape: RoundedRectangleBorder(
-                      side: const BorderSide(
-                          color: Color(0xff24282C), width: 5.0),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    elevation: 8,
-                    margin: const EdgeInsets.only(top: 0),
-                    color: const Color(0xff578F85),
-                    child: Row(
-                      children: [
-                        const Expanded(
-                          flex: 5,
-                          child: Center(
-                            child: Column(
-                              children: [
-                                Text(
-                                  'Subhaneke Duasi ve Anlami',
-                                  style: TextStyle(
-                                    color: Color(0xff24282C),
-                                    fontSize: 26,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: 'PatrickHand',
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          flex: 1,
-                          child: Stack(
-                            children: <Widget>[
-                              Container(
-                                decoration: const BoxDecoration(
-                                  borderRadius: BorderRadius.only(
-                                      topRight: Radius.circular(20),
-                                      bottomRight: Radius.circular(20)),
-                                  color: Color(0xff24282C),
-                                ),
-                                child: const Center(
-                                  child: Padding(
-                                    padding: EdgeInsets.all(8.0),
-                                    child: Column(
-                                      children: [
-                                        Icon(Icons.picture_as_pdf,
-                                            size: 28, color: Color(0xffF8F8F2)),
-                                        SizedBox(
-                                          height: 3,
-                                        ),
-                                        Icon(Icons.headset,
-                                            size: 28, color: Color(0xffF8F8F2))
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(
-                    left: 20, right: 20, top: 0, bottom: 20),
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) =>   const Tahiyyat(),
-                      ),
-                    );
-                  },
-                  child: Card(
-                    shape: RoundedRectangleBorder(
-                      side: const BorderSide(
-                          color: Color(0xff24282C), width: 5.0),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    elevation: 8,
-                    margin: const EdgeInsets.only(top: 0),
-                    color: const Color(0xff578F85),
-                    child: Row(
-                      children: [
-                        const Expanded(
-                          flex: 5,
-                          child: Center(
-                            child: Column(
-                              children: [
-                                Text(
-                                  'Tahiyyat Duasi ve Anlami',
-                                  style: TextStyle(
-                                    color: Color(0xff24282C),
-                                    fontSize: 26,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: 'PatrickHand',
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          flex: 1,
-                          child: Stack(
-                            children: <Widget>[
-                              Container(
-                                decoration: const BoxDecoration(
-                                  borderRadius: BorderRadius.only(
-                                      topRight: Radius.circular(20),
-                                      bottomRight: Radius.circular(20)),
-                                  color: Color(0xff24282C),
-                                ),
-                                child: const Center(
-                                  child: Padding(
-                                    padding: EdgeInsets.all(8.0),
-                                    child: Column(
-                                      children: [
-                                        Icon(Icons.picture_as_pdf,
-                                            size: 28, color: Color(0xffF8F8F2)),
-                                        SizedBox(
-                                          height: 3,
-                                        ),
-                                        Icon(Icons.headset,
-                                            size: 28, color: Color(0xffF8F8F2))
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(
-                    left: 20, right: 20, top: 0, bottom: 20),
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) =>   const SalliBarik(),
-                      ),
-                    );
-                  },
-                  child: Card(
-                    shape: RoundedRectangleBorder(
-                      side: const BorderSide(
-                          color: Color(0xff24282C), width: 5.0),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    elevation: 8,
-                    margin: const EdgeInsets.only(top: 0),
-                    color: const Color(0xff578F85),
-                    child: Row(
-                      children: [
-                        const Expanded(
-                          flex: 5,
-                          child: Center(
-                            child: Column(
-                              children: [
-                                Text(
-                                  'Salli Barik Dualari ve Anlami',
-                                  style: TextStyle(
-                                    color: Color(0xff24282C),
-                                    fontSize: 24,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: 'PatrickHand',
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          flex: 1,
-                          child: Stack(
-                            children: <Widget>[
-                              Container(
-                                decoration: const BoxDecoration(
-                                  borderRadius: BorderRadius.only(
-                                      topRight: Radius.circular(20),
-                                      bottomRight: Radius.circular(20)),
-                                  color: Color(0xff24282C),
-                                ),
-                                child: const Center(
-                                  child: Padding(
-                                    padding: EdgeInsets.all(8.0),
-                                    child: Column(
-                                      children: [
-                                        Icon(Icons.picture_as_pdf,
-                                            size: 28, color: Color(0xffF8F8F2)),
-                                        SizedBox(
-                                          height: 3,
-                                        ),
-                                        Icon(Icons.headset,
-                                            size: 28, color: Color(0xffF8F8F2))
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(
-                    left: 20, right: 20, top: 0, bottom: 20),
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) =>   const Rabbenalar(),
-                      ),
-                    );
-                  },
-                  child: Card(
-                    shape: RoundedRectangleBorder(
-                      side: const BorderSide(
-                          color: Color(0xff24282C), width: 5.0),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    elevation: 8,
-                    margin: const EdgeInsets.only(top: 0),
-                    color: const Color(0xff578F85),
-                    child: Row(
-                      children: [
-                        const Expanded(
-                          flex: 5,
-                          child: Center(
-                            child: Column(
-                              children: [
-                                Text(
-                                  'Rabbena Dualari ve Anlami',
-                                  style: TextStyle(
-                                    color: Color(0xff24282C),
-                                    fontSize: 26,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: 'PatrickHand',
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          flex: 1,
-                          child: Stack(
-                            children: <Widget>[
-                              Container(
-                                decoration: const BoxDecoration(
-                                  borderRadius: BorderRadius.only(
-                                      topRight: Radius.circular(20),
-                                      bottomRight: Radius.circular(20)),
-                                  color: Color(0xff24282C),
-                                ),
-                                child: const Center(
-                                  child: Padding(
-                                    padding: EdgeInsets.all(8.0),
-                                    child: Column(
-                                      children: [
-                                        Icon(Icons.picture_as_pdf,
-                                            size: 28, color: Color(0xffF8F8F2)),
-                                        SizedBox(
-                                          height: 3,
-                                        ),
-                                        Icon(Icons.headset,
-                                            size: 28, color: Color(0xffF8F8F2))
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(
-                    left: 20, right: 20, top: 0, bottom: 20),
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) =>   const Kunut(),
-                      ),
-                    );
-                  },
-                  child: Card(
-                    shape: RoundedRectangleBorder(
-                      side: const BorderSide(
-                          color: Color(0xff24282C), width: 5.0),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    elevation: 8,
-                    margin: const EdgeInsets.only(top: 0),
-                    color: const Color(0xff578F85),
-                    child: Row(
-                      children: [
-                        const Expanded(
-                          flex: 5,
-                          child: Center(
-                            child: Column(
-                              children: [
-                                Text(
-                                  'Kunut Dualari ve Anlami',
-                                  style: TextStyle(
-                                    color: Color(0xff24282C),
-                                    fontSize: 26,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: 'PatrickHand',
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          flex: 1,
-                          child: Stack(
-                            children: <Widget>[
-                              Container(
-                                decoration: const BoxDecoration(
-                                  borderRadius: BorderRadius.only(
-                                      topRight: Radius.circular(20),
-                                      bottomRight: Radius.circular(20)),
-                                  color: Color(0xff24282C),
-                                ),
-                                child: const Center(
-                                  child: Padding(
-                                    padding: EdgeInsets.all(8.0),
-                                    child: Column(
-                                      children: [
-                                        Icon(Icons.picture_as_pdf,
-                                            size: 28, color: Color(0xffF8F8F2)),
-                                        SizedBox(
-                                          height: 3,
-                                        ),
-                                        Icon(Icons.headset,
-                                            size: 28, color: Color(0xffF8F8F2))
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(
-                    left: 20, right: 20, top: 0, bottom: 20),
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) =>   const Fatiha(),
-                      ),
-                    );
-                  },
-                  child: Card(
-                    shape: RoundedRectangleBorder(
-                      side: const BorderSide(
-                          color: Color(0xff24282C), width: 5.0),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    elevation: 8,
-                    margin: const EdgeInsets.only(top: 0),
-                    color: const Color(0xff578F85),
-                    child: Row(
-                      children: [
-                        const Expanded(
-                          flex: 5,
-                          child: Center(
-                            child: Column(
-                              children: [
-                                Text(
-                                  'Fatiha Suresi ve Anlami',
-                                  style: TextStyle(
-                                    color: Color(0xff24282C),
-                                    fontSize: 26,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: 'PatrickHand',
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          flex: 1,
-                          child: Stack(
-                            children: <Widget>[
-                              Container(
-                                decoration: const BoxDecoration(
-                                  borderRadius: BorderRadius.only(
-                                      topRight: Radius.circular(20),
-                                      bottomRight: Radius.circular(20)),
-                                  color: Color(0xff24282C),
-                                ),
-                                child: const Center(
-                                  child: Padding(
-                                    padding: EdgeInsets.all(8.0),
-                                    child: Column(
-                                      children: [
-                                        Icon(Icons.picture_as_pdf,
-                                            size: 28, color: Color(0xffF8F8F2)),
-                                        SizedBox(
-                                          height: 3,
-                                        ),
-                                        Icon(Icons.headset,
-                                            size: 28, color: Color(0xffF8F8F2))
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(
-                    left: 20, right: 20, top: 0, bottom: 20),
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) =>   const Fil(),
-                      ),
-                    );
-                  },
-                  child: Card(
-                    shape: RoundedRectangleBorder(
-                      side: const BorderSide(
-                          color: Color(0xff24282C), width: 5.0),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    elevation: 8,
-                    margin: const EdgeInsets.only(top: 0),
-                    color: const Color(0xff578F85),
-                    child: Row(
-                      children: [
-                        const Expanded(
-                          flex: 5,
-                          child: Center(
-                            child: Column(
-                              children: [
-                                Text(
-                                  'Fil Suresi ve Anlami',
-                                  style: TextStyle(
-                                    color: Color(0xff24282C),
-                                    fontSize: 26,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: 'PatrickHand',
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          flex: 1,
-                          child: Stack(
-                            children: <Widget>[
-                              Container(
-                                decoration: const BoxDecoration(
-                                  borderRadius: BorderRadius.only(
-                                      topRight: Radius.circular(20),
-                                      bottomRight: Radius.circular(20)),
-                                  color: Color(0xff24282C),
-                                ),
-                                child: const Center(
-                                  child: Padding(
-                                    padding: EdgeInsets.all(8.0),
-                                    child: Column(
-                                      children: [
-                                        Icon(Icons.picture_as_pdf,
-                                            size: 28, color: Color(0xffF8F8F2)),
-                                        SizedBox(
-                                          height: 3,
-                                        ),
-                                        Icon(Icons.headset,
-                                            size: 28, color: Color(0xffF8F8F2))
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(
-                    left: 20, right: 20, top: 0, bottom: 20),
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) =>   const Subhaneke(),
-                      ),
-                    );
-                  },
-                  child: Card(
-                    shape: RoundedRectangleBorder(
-                      side: const BorderSide(
-                          color: Color(0xff24282C), width: 5.0),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    elevation: 8,
-                    margin: const EdgeInsets.only(top: 0),
-                    color: const Color(0xff578F85),
-                    child: Row(
-                      children: [
-                        const Expanded(
-                          flex: 5,
-                          child: Center(
-                            child: Column(
-                              children: [
-                                Text(
-                                  'Kureys Suresi ve Anlami',
-                                  style: TextStyle(
-                                    color: Color(0xff24282C),
-                                    fontSize: 26,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: 'PatrickHand',
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          flex: 1,
-                          child: Stack(
-                            children: <Widget>[
-                              Container(
-                                decoration: const BoxDecoration(
-                                  borderRadius: BorderRadius.only(
-                                      topRight: Radius.circular(20),
-                                      bottomRight: Radius.circular(20)),
-                                  color: Color(0xff24282C),
-                                ),
-                                child: const Center(
-                                  child: Padding(
-                                    padding: EdgeInsets.all(8.0),
-                                    child: Column(
-                                      children: [
-                                        Icon(Icons.picture_as_pdf,
-                                            size: 28, color: Color(0xffF8F8F2)),
-                                        SizedBox(
-                                          height: 3,
-                                        ),
-                                        Icon(Icons.headset,
-                                            size: 28, color: Color(0xffF8F8F2))
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(
-                    left: 20, right: 20, top: 0, bottom: 20),
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) =>   const Subhaneke(),
-                      ),
-                    );
-                  },
-                  child: Card(
-                    shape: RoundedRectangleBorder(
-                      side: const BorderSide(
-                          color: Color(0xff24282C), width: 5.0),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    elevation: 8,
-                    margin: const EdgeInsets.only(top: 0),
-                    color: const Color(0xff578F85),
-                    child: Row(
-                      children: [
-                        const Expanded(
-                          flex: 5,
-                          child: Center(
-                            child: Column(
-                              children: [
-                                Text(
-                                  'Maun Suresi ve Anlami',
-                                  style: TextStyle(
-                                    color: Color(0xff24282C),
-                                    fontSize: 26,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: 'PatrickHand',
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          flex: 1,
-                          child: Stack(
-                            children: <Widget>[
-                              Container(
-                                decoration: const BoxDecoration(
-                                  borderRadius: BorderRadius.only(
-                                      topRight: Radius.circular(20),
-                                      bottomRight: Radius.circular(20)),
-                                  color: Color(0xff24282C),
-                                ),
-                                child: const Center(
-                                  child: Padding(
-                                    padding: EdgeInsets.all(8.0),
-                                    child: Column(
-                                      children: [
-                                        Icon(Icons.picture_as_pdf,
-                                            size: 28, color: Color(0xffF8F8F2)),
-                                        SizedBox(
-                                          height: 3,
-                                        ),
-                                        Icon(Icons.headset,
-                                            size: 28, color: Color(0xffF8F8F2))
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(
-                    left: 20, right: 20, top: 0, bottom: 20),
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) =>   const Subhaneke(),
-                      ),
-                    );
-                  },
-                  child: Card(
-                    shape: RoundedRectangleBorder(
-                      side: const BorderSide(
-                          color: Color(0xff24282C), width: 5.0),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    elevation: 8,
-                    margin: const EdgeInsets.only(top: 0),
-                    color: const Color(0xff578F85),
-                    child: Row(
-                      children: [
-                        const Expanded(
-                          flex: 5,
-                          child: Center(
-                            child: Column(
-                              children: [
-                                Text(
-                                  'Kevser Suresi ve Anlami',
-                                  style: TextStyle(
-                                    color: Color(0xff24282C),
-                                    fontSize: 26,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: 'PatrickHand',
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          flex: 1,
-                          child: Stack(
-                            children: <Widget>[
-                              Container(
-                                decoration: const BoxDecoration(
-                                  borderRadius: BorderRadius.only(
-                                      topRight: Radius.circular(20),
-                                      bottomRight: Radius.circular(20)),
-                                  color: Color(0xff24282C),
-                                ),
-                                child: const Center(
-                                  child: Padding(
-                                    padding: EdgeInsets.all(8.0),
-                                    child: Column(
-                                      children: [
-                                        Icon(Icons.picture_as_pdf,
-                                            size: 28, color: Color(0xffF8F8F2)),
-                                        SizedBox(
-                                          height: 3,
-                                        ),
-                                        Icon(Icons.headset,
-                                            size: 28, color: Color(0xffF8F8F2))
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(
-                    left: 20, right: 20, top: 0, bottom: 20),
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) =>   const Subhaneke(),
-                      ),
-                    );
-                  },
-                  child: Card(
-                    shape: RoundedRectangleBorder(
-                      side: const BorderSide(
-                          color: Color(0xff24282C), width: 5.0),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    elevation: 8,
-                    margin: const EdgeInsets.only(top: 0),
-                    color: const Color(0xff578F85),
-                    child: Row(
-                      children: [
-                        const Expanded(
-                          flex: 5,
-                          child: Center(
-                            child: Column(
-                              children: [
-                                Text(
-                                  'Kafirun Suresi ve Anlami',
-                                  style: TextStyle(
-                                    color: Color(0xff24282C),
-                                    fontSize: 26,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: 'PatrickHand',
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          flex: 1,
-                          child: Stack(
-                            children: <Widget>[
-                              Container(
-                                decoration: const BoxDecoration(
-                                  borderRadius: BorderRadius.only(
-                                      topRight: Radius.circular(20),
-                                      bottomRight: Radius.circular(20)),
-                                  color: Color(0xff24282C),
-                                ),
-                                child: const Center(
-                                  child: Padding(
-                                    padding: EdgeInsets.all(8.0),
-                                    child: Column(
-                                      children: [
-                                        Icon(Icons.picture_as_pdf,
-                                            size: 28, color: Color(0xffF8F8F2)),
-                                        SizedBox(
-                                          height: 3,
-                                        ),
-                                        Icon(Icons.headset,
-                                            size: 28, color: Color(0xffF8F8F2))
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(
-                    left: 20, right: 20, top: 0, bottom: 20),
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) =>   const Subhaneke(),
-                      ),
-                    );
-                  },
-                  child: Card(
-                    shape: RoundedRectangleBorder(
-                      side: const BorderSide(
-                          color: Color(0xff24282C), width: 5.0),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    elevation: 8,
-                    margin: const EdgeInsets.only(top: 0),
-                    color: const Color(0xff578F85),
-                    child: Row(
-                      children: [
-                        const Expanded(
-                          flex: 5,
-                          child: Center(
-                            child: Column(
-                              children: [
-                                Text(
-                                  'Nasr Suresi ve Anlami',
-                                  style: TextStyle(
-                                    color: Color(0xff24282C),
-                                    fontSize: 26,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: 'PatrickHand',
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          flex: 1,
-                          child: Stack(
-                            children: <Widget>[
-                              Container(
-                                decoration: const BoxDecoration(
-                                  borderRadius: BorderRadius.only(
-                                      topRight: Radius.circular(20),
-                                      bottomRight: Radius.circular(20)),
-                                  color: Color(0xff24282C),
-                                ),
-                                child: const Center(
-                                  child: Padding(
-                                    padding: EdgeInsets.all(8.0),
-                                    child: Column(
-                                      children: [
-                                        Icon(Icons.picture_as_pdf,
-                                            size: 28, color: Color(0xffF8F8F2)),
-                                        SizedBox(
-                                          height: 3,
-                                        ),
-                                        Icon(Icons.headset,
-                                            size: 28, color: Color(0xffF8F8F2))
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(
-                    left: 20, right: 20, top: 0, bottom: 20),
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) =>   const Subhaneke(),
-                      ),
-                    );
-                  },
-                  child: Card(
-                    shape: RoundedRectangleBorder(
-                      side: const BorderSide(
-                          color: Color(0xff24282C), width: 5.0),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    elevation: 8,
-                    margin: const EdgeInsets.only(top: 0),
-                    color: const Color(0xff578F85),
-                    child: Row(
-                      children: [
-                        const Expanded(
-                          flex: 5,
-                          child: Center(
-                            child: Column(
-                              children: [
-                                Text(
-                                  'Tebbet Suresi ve Anlami',
-                                  style: TextStyle(
-                                    color: Color(0xff24282C),
-                                    fontSize: 26,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: 'PatrickHand',
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          flex: 1,
-                          child: Stack(
-                            children: <Widget>[
-                              Container(
-                                decoration: const BoxDecoration(
-                                  borderRadius: BorderRadius.only(
-                                      topRight: Radius.circular(20),
-                                      bottomRight: Radius.circular(20)),
-                                  color: Color(0xff24282C),
-                                ),
-                                child: const Center(
-                                  child: Padding(
-                                    padding: EdgeInsets.all(8.0),
-                                    child: Column(
-                                      children: [
-                                        Icon(Icons.picture_as_pdf,
-                                            size: 28, color: Color(0xffF8F8F2)),
-                                        SizedBox(
-                                          height: 3,
-                                        ),
-                                        Icon(Icons.headset,
-                                            size: 28, color: Color(0xffF8F8F2))
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(
-                    left: 20, right: 20, top: 0, bottom: 20),
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) =>   const Subhaneke(),
-                      ),
-                    );
-                  },
-                  child: Card(
-                    shape: RoundedRectangleBorder(
-                      side: const BorderSide(
-                          color: Color(0xff24282C), width: 5.0),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    elevation: 8,
-                    margin: const EdgeInsets.only(top: 0),
-                    color: const Color(0xff578F85),
-                    child: Row(
-                      children: [
-                        const Expanded(
-                          flex: 5,
-                          child: Center(
-                            child: Column(
-                              children: [
-                                Text(
-                                  'Ihlas Suresi ve Anlami',
-                                  style: TextStyle(
-                                    color: Color(0xff24282C),
-                                    fontSize: 26,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: 'PatrickHand',
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          flex: 1,
-                          child: Stack(
-                            children: <Widget>[
-                              Container(
-                                decoration: const BoxDecoration(
-                                  borderRadius: BorderRadius.only(
-                                      topRight: Radius.circular(20),
-                                      bottomRight: Radius.circular(20)),
-                                  color: Color(0xff24282C),
-                                ),
-                                child: const Center(
-                                  child: Padding(
-                                    padding: EdgeInsets.all(8.0),
-                                    child: Column(
-                                      children: [
-                                        Icon(Icons.picture_as_pdf,
-                                            size: 28, color: Color(0xffF8F8F2)),
-                                        SizedBox(
-                                          height: 3,
-                                        ),
-                                        Icon(Icons.headset,
-                                            size: 28, color: Color(0xffF8F8F2))
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(
-                    left: 20, right: 20, top: 0, bottom: 20),
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) =>   const Subhaneke(),
-                      ),
-                    );
-                  },
-                  child: Card(
-                    shape: RoundedRectangleBorder(
-                      side: const BorderSide(
-                          color: Color(0xff24282C), width: 5.0),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    elevation: 8,
-                    margin: const EdgeInsets.only(top: 0),
-                    color: const Color(0xff578F85),
-                    child: Row(
-                      children: [
-                        const Expanded(
-                          flex: 5,
-                          child: Center(
-                            child: Column(
-                              children: [
-                                Text(
-                                  'Felak Suresi ve Anlami',
-                                  style: TextStyle(
-                                    color: Color(0xff24282C),
-                                    fontSize: 26,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: 'PatrickHand',
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          flex: 1,
-                          child: Stack(
-                            children: <Widget>[
-                              Container(
-                                decoration: const BoxDecoration(
-                                  borderRadius: BorderRadius.only(
-                                      topRight: Radius.circular(20),
-                                      bottomRight: Radius.circular(20)),
-                                  color: Color(0xff24282C),
-                                ),
-                                child: const Center(
-                                  child: Padding(
-                                    padding: EdgeInsets.all(8.0),
-                                    child: Column(
-                                      children: [
-                                        Icon(Icons.picture_as_pdf,
-                                            size: 28, color: Color(0xffF8F8F2)),
-                                        SizedBox(
-                                          height: 3,
-                                        ),
-                                        Icon(Icons.headset,
-                                            size: 28, color: Color(0xffF8F8F2))
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(
-                    left: 20, right: 20, top: 0, bottom: 20),
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) =>   const Subhaneke(),
-                      ),
-                    );
-                  },
-                  child: Card(
-                    shape: RoundedRectangleBorder(
-                      side: const BorderSide(
-                          color: Color(0xff24282C), width: 5.0),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    elevation: 8,
-                    margin: const EdgeInsets.only(top: 0),
-                    color: const Color(0xff578F85),
-                    child: Row(
-                      children: [
-                        const Expanded(
-                          flex: 5,
-                          child: Center(
-                            child: Column(
-                              children: [
-                                Text(
-                                  'Nas Suresi ve Anlami',
-                                  style: TextStyle(
-                                    color: Color(0xff24282C),
-                                    fontSize: 26,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: 'PatrickHand',
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          flex: 1,
-                          child: Stack(
-                            children: <Widget>[
-                              Container(
-                                decoration: const BoxDecoration(
-                                  borderRadius: BorderRadius.only(
-                                      topRight: Radius.circular(20),
-                                      bottomRight: Radius.circular(20)),
-                                  color: Color(0xff24282C),
-                                ),
-                                child: const Center(
-                                  child: Padding(
-                                    padding: EdgeInsets.all(8.0),
-                                    child: Column(
-                                      children: [
-                                        Icon(Icons.picture_as_pdf,
-                                            size: 28, color: Color(0xffF8F8F2)),
-                                        SizedBox(
-                                          height: 3,
-                                        ),
-                                        Icon(Icons.headset,
-                                            size: 28, color: Color(0xffF8F8F2))
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
+          child: Padding(
+            padding: const EdgeInsets.only(top:8.0, bottom: 8.0),
+            child: Column(
+              children: [
 
-              // ButtonBarWidget(),
 
-              // Diğer sayfa içeriğini eklemek için gerekli widget'ları ekleyin
-            ],
+                SurelerWidget(
+                  title: 'Fatiha Suresi ve Anlamı',
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Fatiha(),
+                      ),
+                    );
+                  },
+                ),
+
+                SurelerWidget(
+                  title: 'Fil Suresi ve Anlamı',
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Fil(),
+                      ),
+                    );
+                  },
+                ),
+
+                SurelerWidget(
+                  title: 'Kureyş Suresi ve Anlamı',
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Kureys(),
+                      ),
+                    );
+                  },
+                ),
+
+                SurelerWidget(
+                  title: 'Maun Suresi ve Anlamı',
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Maun(),
+                      ),
+                    );
+                  },
+                ),
+
+                SurelerWidget(
+                  title: 'Kevser Suresi ve Anlamı',
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Kevser(),
+                      ),
+                    );
+                  },
+                ),
+
+                SurelerWidget(
+                  title: 'Kafirun Suresi ve Anlamı',
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Kafirun(),
+                      ),
+                    );
+                  },
+                ),
+
+                SurelerWidget(
+                  title: 'Nasr Suresi ve Anlamı',
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Nasr(),
+                      ),
+                    );
+                  },
+                ),
+
+                SurelerWidget(
+                  title: 'Tebbet Suresi ve Anlamı',
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Tebbet(),
+                      ),
+                    );
+                  },
+                ),
+
+                SurelerWidget(
+                  title: 'İhlas Suresi ve Anlamı',
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Ihlas(),
+                      ),
+                    );
+                  },
+                ),
+
+                SurelerWidget(
+                  title: 'Felak Suresi ve Anlamı',
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Felak(),
+                      ),
+                    );
+                  },
+                ),
+
+                SurelerWidget(
+                  title: 'Nas Suresi ve Anlamı',
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Nas(),
+                      ),
+                    );
+                  },
+                ),
+
+                SurelerWidget(
+                  title: 'Asr Suresi ve Anlamı',
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Asr(),
+                      ),
+                    );
+                  },
+                ),
+
+                SurelerWidget(
+                  title: 'Ayet-el Kürsi Suresi ve Anlamı',
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Ayetelkursi(),
+                      ),
+                    );
+                  },
+                ),
+
+                SurelerWidget(
+                  title: 'Subhaneke Duası ve Anlamı',
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Subhaneke(),
+                      ),
+                    );
+                  },
+                ),
+
+                SurelerWidget(
+                  title: 'Ettehiyyatu Duası ve Anlamı',
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Tahiyyat(),
+                      ),
+                    );
+                  },
+                ),
+
+                SurelerWidget(
+                  title: 'Salli Barik Duaları ve Anlamı',
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const SalliBarik(),
+                      ),
+                    );
+                  },
+                ),
+
+                SurelerWidget(
+                  title: 'Rabbenâ  Duaları ve Anlamı',
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Rabbenalar(),
+                      ),
+                    );
+                  },
+                ),
+
+
+                SurelerWidget(
+                  title: 'Kunut Duaları  Duası ve Anlamı',
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Kunut(),
+                      ),
+                    );
+                  },
+                ),
+
+
+
+
+
+
+
+
+
+
+
+                // Diğer sayfa içeriğini eklemek için gerekli widget'ları ekleyin
+              ],
+            ),
           ),
         ),
       ),
