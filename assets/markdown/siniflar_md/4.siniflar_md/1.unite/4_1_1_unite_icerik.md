@@ -1,6 +1,6 @@
 # Günlük Konuşmalarda Dinî İfadeler
 
-**Din Nedir?**   HHH
+**Din Nedir?**
 
 Akıl sahiplerini kendi istek ve hür iradeleri ile hayırlı olan şeylere sevk eden ilahî kurallardır.
 
